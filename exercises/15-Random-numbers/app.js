@@ -3,7 +3,7 @@
 function getRandomInt()
 {
 	var randomNumber = Math.random();
-	return randomNumber;
+	return Math.floor(randomNumber * 10);
 }
 
 
