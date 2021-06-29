@@ -1,5 +1,4 @@
-var bulletPosition = 6;
-
+var bulletPosition = 4;
 
 const spinChamber = () => {
 	var chamberPosition = Math.floor((Math.random() * 6) + 1);
@@ -8,12 +7,25 @@ const spinChamber = () => {
 
 // Remove the // below and complete the commented lines
 const fireGun = (spinnerPosition) => {
-    
-    if (bulletPosition === spinChamber()) {
-        console.log("You are dead");
-    } else {
-        console.log("Keep playing!");    
-    }
+    if (bulletPosition === spinnerPosition)
+        return "You're dead!";
+        else return "Keep playing!"; 
 };
 
-fireGun();
+console.log(fireGun(spinChamber()));
+
+// For some reason this works. It was sent to me by another student but the weird thing is that I'm getting dead
+//when bulletPosition and spinnerPosition don't match
+
+/* var bulletPosition = 4;
+const spinChamber = () => {
+  var chamberPosition = Math.floor(Math.random() * 6 + 1);
+  return chamberPosition;
+};
+// Remove the // below and complete the commented lines
+const fireGun = (spinnerPosition) => {
+  if (spinnerPosition == bulletPosition) return "You're dead!";
+  else return "Keep playing!";
+};
+console.log(spinChamber());
+console.log(fireGun(spinChamber()));*/
